@@ -3,6 +3,11 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
 
 # , DeleteView
+from .models import Post
+from django.urls import reverse_lazy
+from .forms import *
+import users
+from users.models import Profile
 
 
 class HomePageView(LoginRequiredMixin, ListView):
