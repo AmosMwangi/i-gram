@@ -7,15 +7,8 @@ This project was generated with [Python](https://www.python.org/) version 3.6.9 
 * Amos Mwangi
 
 ## Description
-It's an webapp that has features of uploading new pics and show location where the image was taken from and also it's type of category. If a pic pleases you just click on it to view it in a zoomed modal and also view it's details.
+It's an webapp that has features of uploading new pics. 
 
-## User Stories
-Features of the application
-
-* A user can view diffrent pics
-* A user can click on the pic to view it's detail, category and also location where  the pic was taken on a modal.
-* A user can search for a pics by category
-* A user can subscribe to get to more pics when posted
 
 
 ## SetUp / Installation Requirements
@@ -27,7 +20,7 @@ Features of the application
 ### Cloning
 * In your terminal:
 
-        $ git clone https://github.com/AmosMwangi/bavilion
+        $ git clone https://github.com/AmosMwangi/i-gram
         $ cd Blogs
 
 ## Running the Application
@@ -67,4 +60,4 @@ Features of the application
 
 ### License
 * This project is licensed by [MIT License](LICENSE.txt)<br>
-  Copyright (c) [Bavilion](https://github.com/AmosMwangi/bavilion) 2019<br>
+  Copyright (c) [Insta Clone](https://github.com/AmosMwangi/i-gram) 2019<br>
