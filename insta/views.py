@@ -22,7 +22,11 @@ class PostDetailView(DetailView):
     template_name = "insta/detail.html"
 
 
-
+class CreatePostView(CreateView):
+    model = Post
+    form_class = PostForm
+    template_name = "insta/post.html"
+    success_url = reverse_lazy("home")
 
 
 class UpdatePostView(UpdateView):
