@@ -68,10 +68,10 @@ def comment(request, id):
     return render(request, "insta/home.html", {"form": form, "id": id})
 
 
-def comment_view(request, id):
-    image = Post.objects.filter(id=id)
-    comments = Comment.objects.filter(post_id=id)
-    return render(request, "insta/home.html", {"image": image, "comments": comments})
+# def comment_view(request, id):
+#     image = Post.objects.filter(id=id)
+#     comments = Comment.objects.filter(post_id=id)
+#     return render(request, "insta/home.html", {"image": image, "comments": comments})
 
 
 def like(request):
