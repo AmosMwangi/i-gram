@@ -11,10 +11,7 @@ class Post(models.Model):
     date_posted = models.DateTimeField(default=timezone.now)
     content = models.TextField()
     liked = models.ManyToManyField(User,blank= True,related_name='post_likes')
-    # author = models.ForeignKey(User, on_delete=models.CASCADE)
-    # author = models.ForeignKey(User, blank=True, null=True, on_delete=models.SET_NULL)
-    # user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
-    
+
 
 
     def __str__(self):
