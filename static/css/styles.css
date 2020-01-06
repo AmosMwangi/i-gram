@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+#post-img {
+    height: 100%;
+    width: 100%;
+}
+
+.card {
+    background-color: white;
+    margin-bottom: 50px !important;
+}
+
+#more-btn {
+    text-align: center !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-radius: 30px;
+    width: 120px;
+    color: black;
+    border: 1px solid blue;
+    text-decoration: none;
+}
+
+#more-btn:hover {
+    background-color: lightblue;
+}
+
+#card {
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 250px;
+}
+
+#prof-circle {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    background-color: black;
+    margin-top: 2.7px;
+    margin-left: 3px;
+    /* margin-right: 50px; */
+}
+
+#prof-ring {
+
+    border: 1.8px solid rgb(233, 61, 17);
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    margin-top: 10px;
+    margin-left: 12px;
+    margin-bottom: 12px;
+
+}
+
+#post-hub {
+    padding-left: 7%;
+    padding-right: 2%;
+}
+
+#right-card {
+    background-color: black;
+    height: 200px;
+    margin-top: 62px;
+}
+
+#mock-name {
+    position: absolute;
+    top: 3%;
+    left: 11%;
+    font-size: 16px;
+
+}
+
+#tmodal {
+    top: 0%;
+    position: absolute;
+    margin-left: 38em;
+    margin-top: 10px;
+}
+
+#dd {
+    display: flex !important;
+    padding: 17px;
+}
+
+#da,
+#db,
+#dc {
+    height: 4px;
+    width: 4px;
+    background-color: rgb(49, 48, 48);
+    border-radius: 50%;
+    margin: 1.5px;
+}
+
+#link-icon {
+    margin-top: 10px;
+    margin-left: 14px;
+}
+
+#link {
+    margin: 3px;
+}
+
+#llink {
+    float: right;
+    margin-right: 18px;
+}
+
+#maneno-card {
+    margin-left: 14px;
+}
+
+#user-img {
+    height: 52px;
+    width: 52px;
+    border-radius: 50%;
+}
+
+#user {
+    position: absolute;
+    top: 23px;
+    margin-left: 60px;
+
+}
+
+#usermail {
+    position: absolute;
+    top: 16px;
+    font-size: 14px;
+
+}
+
+
+@media screen and (min-width: 310px) {
+
+
+    #field {
+        color: rgb(112, 112, 112) !important;
+    }
+
+    #npost-card {
+        width: 420px !important;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    #post-btn {
+        border-radius: 50px;
+        border: 2px solid lightblue;
+        padding: 10px;
+        width: 100px;
+    }
+
+    #post-btn:hover {
+        background-color: rgb(105, 165, 185);
+        color: white;
+    }
+
+    #make-post {
+        /* height: 100vh; */
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.39);
+    }
+}
+
+
+@media screen and (max-width: 1493px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    #right {
+        display: none;
+    }
+
+    #post-card {
+        position: relative;
+        display: block;
+        margin-right: 20% !important;
+        margin-left: auto !important;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #dd {
+        position: relative;
+        padding: 17px !important;
+        right: 190% !important;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    body {
+        background-color: skyblue;
+    }
+
+    #display-post {
+        position: relative;
+        width: 1442px !important;
+        right: 43.7% !important;
+    }
+
+    #prof-ring {
+        height: 160px;
+        width: 160px;
+        border: 6px solid rgb(233, 61, 17);
+        margin-left: 45px;
+    }
+
+    #prof-circle {
+        height: 130px !important;
+        width: 130px !important;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    #top {
+        padding-bottom: 20px !important;
+        padding-top: 20px;
+    }
+
+    #mock-name {
+        font-size: 3.3rem !important;
+        font-weight: 550;
+        margin-left: 80px;
+        top: 60px;
+    }
+
+    #dd {
+        position: relative;
+        top: 50px;
+        left: 570% !important;
+    }
+
+    #da,
+    #db,
+    #dc {
+        height: 15px;
+        width: 15px;
+        background-color: rgb(49, 48, 48);
+        border-radius: 50%;
+        margin: 6px;
+    }
+
+
+    #link-icon {
+        margin-top: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #link {
+        margin: 7px;
+        height: 80px;
+        width: 80px;
+    }
+
+    #llink {
+        height: 80px;
+        width: 60px;
+    }
+
+    #maneno-card {
+        font-size: 3.5rem !important;
+    }
+
+    #post-title {
+        font-size: 3.5rem !important;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 390px) {
+    body {
+        background-color: aquamarine;
+        font-size: 3rem !important;
+        overflow-x: hidden;
+    }
+
+    #display-post {
+        position: relative;
+        width: 1442px !important;
+        right: 43.7% !important;
+    }
+
+    #prof-ring {
+        height: 160px;
+        width: 160px;
+        border: 6px solid rgb(233, 61, 17);
+        margin-left: 45px;
+    }
+
+    #prof-circle {
+        height: 130px !important;
+        width: 130px !important;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    #top {
+        padding-bottom: 20px !important;
+        padding-top: 20px;
+    }
+
+    #mock-name {
+        font-size: 3.3rem !important;
+        font-weight: 550;
+        margin-left: 80px;
+        top: 60px;
+    }
+
+    #dd {
+        top: 50px;
+        position: relative;
+        right: 450% !important;
+    }
+
+    #da,
+    #db,
+    #dc {
+        height: 15px;
+        width: 15px;
+        background-color: rgb(49, 48, 48);
+        border-radius: 50%;
+        margin: 6px;
+    }
+
+
+    #link-icon {
+        margin-top: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #link {
+        margin: 7px;
+        height: 80px;
+        width: 80px;
+    }
+
+    #llink {
+        height: 80px;
+        width: 60px;
+    }
+
+    #maneno-card {
+        font-size: 3.5rem !important;
+    }
+
+    #post-title {
+        font-size: 3.5rem !important;
+    }
+
+}
+

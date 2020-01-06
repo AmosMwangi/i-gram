@@ -1,0 +1,73 @@
+{% extends 'users/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+<section id="reg-section">
+    <div class="signup">
+        <div class="row">
+            <div class="col-6">
+                <img src="{% static "imapp/phone.jpg" %}" id="phone" alt="My image">
+            </div>
+            <div class="col-6" id="signup-form">
+                <div class="card" style="background-color: white;">
+                    <div class="card-body">
+                        <div style="padding-right: 6%; padding-left: 6%;">
+                            <form method="POST">
+                                {% csrf_token %}
+                                <fieldset class="form-group">
+                                    <img src="{% static "imapp/insta.jpg" %}" id="insta" alt="insta">
+                                    <h5 class="text-muted text-center"
+                                        style="display: block; padding-right: 2%; padding-left: 2%; color: rgb(138, 136, 136) !important; font-size: 18px; font-weight: bold;">
+                                        Sign up to see photos and videos from your friends.</h5>
+
+                                    {{ form|crispy }}
+                                </fieldset>
+                                <div class="form-group">
+                                    <button class="btn btn-outline-" id="sigup-btn" type="submit">sign up</button>
+                                </div>
+                            </form>
+                            <div class="text-center" style="padding-left: 3%; padding-right: 3%; color: rgb(158, 156, 156);">
+                                <span  style="font-size: 15.7px;">By signing up, you agree
+                                to our </span> <span style=" color: rgb(158, 156, 156);"> <b> Terms </b> , <b> Data </b> <b> Policy </b> and <b> Cookies Policy </b> .</span class="text-muted"> </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card" id="sl">
+                    <div class="card-body">
+                        <p id="sl-text" style="font-size: 15px;">
+                            Have an account? <a class="ml-2" href="{% url 'login' %}">Log In</a>
+                        </p>
+                    </div>
+                </div>
+                <div style="padding-top: 25px !important;">
+                    <p class="text-center" style="font-size: 15px;">Get the app</p>
+                </div>
+                <div id="market">
+                    <a href="https://apps.apple.com/us/app/instagram/id389801252"><img
+                            src="{% static "imapp/apple.jpg" %}" id="markett" alt="My image"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.instagram.android"><img
+                            src="{% static "imapp/google.jpg" %}" id="markett" alt="My image"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div id="footer">
+        <a href="https://about.instagram.com/about-us" id="a">ABOUT US</a>
+        <a href="https://help.instagram.com/" id="a">SUPPORT</a>
+        <a href="https://instagram-press.com/" id="a">PRESS</a>
+        <a href="https://www.instagram.com/developer/" id="a">API</a>
+        <a href="https://www.instagram.com/about/jobs/" id="a">JOBS</a>
+        <a href="https://help.instagram.com/519522125107875" id="a">PRIVACY</a>
+        <a href="https://help.instagram.com/581066165581870" id="a">TERMS</a>
+        <a href="https://www.instagram.com/explore/locations/" id="a">DIRECTORY</a>
+        <a href="https://www.instagram.com/directory/profiles/" id="a">PROFILES</a>
+        <a href="https://www.instagram.com/directory/hashtags/" id="a">HASHTAGS</a>
+        <a href="" id="a">LANGUAGE</a>
+        <p id="p">&copy; 2020 instagram from facebook</p>
+    </div>
+</footer>
+
+{% endblock content %}
