@@ -17,13 +17,12 @@ class HomePageView(LoginRequiredMixin, ListView):
     ordering = ["-date_posted"]
 
 
-
-
-class CreatePostView(CreateView):
+class PostDetailView(DetailView):
     model = Post
-    form_class = PostForm
-    template_name = "insta/post.html"
-    success_url = reverse_lazy("home")
+    template_name = "insta/detail.html"
+
+
+
 
 
 class UpdatePostView(UpdateView):
