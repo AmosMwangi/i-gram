@@ -17,9 +17,6 @@ class HomePageView(LoginRequiredMixin, ListView):
     ordering = ["-date_posted"]
 
 
-class PostDetailView(DetailView):
-    model = Post
-    template_name = "insta/detail.html"
 
 
 class CreatePostView(CreateView):
