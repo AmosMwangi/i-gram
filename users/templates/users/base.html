@@ -1,0 +1,310 @@
+{% load bootstrap4 %}
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% block styles %}
+    {% bootstrap_css %}
+
+    {% endblock %}
+</head>
+
+<style>
+    * {
+        box-sizing: border-box !important;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    #prof-img {
+        height: 320px !important;
+        width: 320px !important;
+        border-radius: 50%;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    section {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    #form {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    #update-btn {
+        padding: 8px;
+        border-radius: 30px;
+        width: 120px;
+        border: 2px gray solid;
+
+    }
+
+    #update-btn:hover {
+        box-shadow:
+            inset 0 0 50px #fff,
+            inset 20px 0 80px #f0f,
+            inset -20px 0 80px #0ff,
+            inset 20px 0 300px #f0f,
+            inset -20px 0 300px #0ff,
+            0 0 50px #fff,
+            -10px 0 80px #f0f,
+            10px 0 80px #0ff;
+    }
+
+    /*  ================
+            logout
+        ===================
+    */
+    #main {
+        height: 100vh;
+        background: #654ea3;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #eaafc8, #654ea3);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #eaafc8, #654ea3);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        clip-path: polygon(100% 0, 100% 78.5%, 82% 85%, 62.9% 88.5%, 47.9% 88.7%, 34% 87.4%, 18% 84%, 0 77.5%, 0 0);
+
+    }
+
+    #logout-part {
+        margin-top: 15em !important;
+    }
+
+    #logout-btn {
+        position: relative;
+        padding: 15px;
+        color: white;
+        font-size: 1.2rem;
+        border: 2px black solid;
+        border-radius: 50px;
+        top: 50px !important;
+    }
+
+    #logout-btn:hover {
+        text-decoration: none;
+        background-color: rgb(160, 76, 160);
+    }
+
+    .login-form {
+        padding-left: 25%;
+        padding-right: 30%;
+        padding-top: 10%;
+    }
+
+    /*  ======================
+            registration
+        ======================
+    */
+
+    .signup {
+        padding-left: 5%;
+        padding-right: 10%;
+
+    }
+
+
+
+    #reg-section {
+        position: relative;
+        top: 0;
+        height: 133vh !important;
+        background-color: whitesmoke !important;
+        overflow: hidden !important;
+
+    }
+
+
+    .row::after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+
+    [class*="col-"] {
+        float: left;
+        padding: 115px;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    #phone {
+        position: relative;
+        top: 7%;
+    }
+
+    #signup-form {
+        padding-left: 5.5%;
+        padding-right: 5.5%;
+        padding-bottom: 30em !important;
+
+    }
+
+    #insta {
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 32px !important;
+        padding-bottom: 8px !important;
+    }
+
+    #sigup-btn {
+        padding: 5px;
+        background-color: #1E90FF;
+        color: white;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .row {
+        margin-top: 2.5em !important;
+    }
+
+    #sl {
+        position: relative;
+        padding-top: 10px !important;
+        top: 10px !important;
+    }
+
+    #sl-text {
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        transform: translate(0%, 50%);
+    }
+
+    #market {
+        padding-left: 8% !important;
+        padding-right: 4% !important;
+    }
+
+    #markett {
+        height: 45px;
+        width: 150px;
+        padding-left: 5px;
+    }
+    #footer{
+        padding-left: 12%;
+        padding-right: 12%;
+        background-color: whitesmoke !important;
+        padding-top: 7% !important;
+        padding-bottom: 40px !important;
+    }
+
+    ul{
+        display: flex;
+        text-decoration: none;
+        
+    }
+    #a{
+        padding: 8px !important;
+        font-size: 13px;
+        color: navy;
+        font-weight: bold;
+        font-family: sans-serif;
+        text-decoration: none;
+    }
+
+    #p{
+        position: relative;
+        color: rgb(129, 127, 127);
+        float: right !important;
+        text-transform: uppercase ;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    /*  =====================
+            login
+        ========================
+    */
+    #login-html{
+        top: 0;
+        background-color: whitesmoke;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .frame{
+        position: relative;
+        top: 4em;
+        padding-left: 24%;
+        padding-right: 24%;
+        
+
+    }
+    #card-body{
+        padding-left: 12%;
+        padding-right: 12%;
+    }
+    #login-btn{
+
+        background-color: rgb(192, 214, 236);
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        width: 100%;
+        height: 33px !important;
+    }
+
+    #login-text{
+        position: relative;
+        margin-top: 5px !important;
+
+    }
+
+    #sn-form{
+        padding: 20px;
+    }
+
+    #sn-text{
+        position: relative;
+        top: 20px !important;
+        color: black !important;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #login-footer{
+        padding-left: 12%;
+        padding-right: 12%;
+        padding-top: 14.2% !important;
+    }
+</style>
+
+<body>
+
+    <!-- authentication block form -->
+    {% block auth %}
+    {% endblock %}
+
+    <!-- content -->
+    {% block content %}
+    {% endblock %}
+
+
+
+    <!-- footer -->
+    {% block footer %}
+    {% endblock %}
+
+</body>
+
+</html>
