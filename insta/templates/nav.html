@@ -55,6 +55,7 @@
         <nav>
             <!-- insta -->
             <a href="/"><img src="{% static "imapp/ins.jpg" %}" id="insta" alt="My image"></a>
+            
 
             <!-- right side links -->
             <div id="a">
@@ -71,7 +72,12 @@
 
             </div>
         </nav>
+        
     </div>
+    <form class="form-inline" role='search' action="{% url 'search' %}" id="search">
+        <input type="text" class="form-control" placeholder="Search for posts" name="term">            
+        <button style="background-color:rgb(255, 255, 255)" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>            
+    </form>  
 
 </body>
 

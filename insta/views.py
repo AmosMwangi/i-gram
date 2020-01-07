@@ -112,3 +112,19 @@ def follow(request):
         follow.followers.add(user)
     return redirect("home")
 
+@login_required(login_url="/accounts/login/")
+def search(request):
+    if 'term' in request.GET and request.GET["term"]:
+        term=request.GET.get('term')
+        try:
+            posts=Post.objects.filter(title__icontains=term)
+            message=f'{term}'
+            title="Searches"
+            if posts:  
+                return render(request, 'insta/search.html',{"posts":posts,"title":title,"message":message})
+        except Post.DoesNotExist:        
+            message=f'{term}'
+            title="Searches"
+            return render(request, 'insta/search.html',{"title":title,"message":message})
+
+   
