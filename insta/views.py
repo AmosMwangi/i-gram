@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from django.contrib.auth.decorators import login_required
 
 # , DeleteView
 from .models import Post
@@ -22,11 +23,29 @@ class PostDetailView(DetailView):
     template_name = "insta/detail.html"
 
 
-class CreatePostView(CreateView):
-    model = Post
-    form_class = PostForm
-    template_name = "insta/post.html"
-    success_url = reverse_lazy("home")
+# class CreatePostView(CreateView):
+#     model = Post
+#     form_class = PostForm
+#     template_name = "insta/post.html"
+#     success_url = reverse_lazy("home")
+
+@login_required(login_url="/accounts/login/")
+def create_post(request):
+  '''
+  view function that renders a form for creating a new post
+  '''  
+  if request.method=='POST':
+    form=PostForm(request.POST,request.FILES)
+    if form.is_valid():
+      post=form.save(commit=False)
+      post.author=request.user
+      post.save()
+
+      return redirect('home')
+  else:
+    form=PostForm()    
+    
+  return render(request,'insta/post.html',{"form":form})  
 
 
 class UpdatePostView(UpdateView):

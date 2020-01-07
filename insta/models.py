@@ -11,6 +11,7 @@ class Post(models.Model):
     date_posted = models.DateTimeField(default=timezone.now)
     content = models.TextField()
     liked = models.ManyToManyField(User,blank= True,related_name='post_likes')
+    author=models.ForeignKey(User, on_delete=models.CASCADE)
 
 
 
@@ -27,6 +28,9 @@ class Comment(models.Model):
     posted_by = models.ForeignKey(User, on_delete = models.CASCADE)
     posted_on = models.DateField(auto_now_add=True)
     post_id = models.ForeignKey(Post,on_delete= models.CASCADE)
+
+    def __str__(self):
+        return self.posted_by
 
 
 
