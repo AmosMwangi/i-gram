@@ -8,6 +8,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body{
+    overflow-x: hidden !important;
+}
+
 
 #post-img {
     height: 100%;
@@ -380,4 +384,9 @@ html {
 
 #search{
     transform: translate(40%, -100%);
+}
+
+#logout{
+    height: 35px;
+    width: 35px;
 }

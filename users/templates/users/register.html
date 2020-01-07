@@ -1,5 +1,5 @@
 {% extends 'users/base.html' %}
-{% load crispy_forms_tags %}
+
 {% load static %}
 {% block content %}
 <section id="reg-section">
@@ -20,15 +20,36 @@
                                         style="display: block; padding-right: 2%; padding-left: 2%; color: rgb(138, 136, 136) !important; font-size: 18px; font-weight: bold;">
                                         Sign up to see photos and videos from your friends.</h5>
 
-                                    {{ form|crispy }}
+                                    <form method="post">
+                                        <div id="reg-form">
+                                            {% csrf_token %}
+                                            {% for field in form %}
+                                            <p>
+                                                {{ field.label_tag }}
+                                                <div id="field">
+                                                    {{ field }}
+                                                </div>
+                                                {% if field.help_text %}
+                                                <!-- <small style="color: grey">{{ field.help_text }}</small> -->
+                                                {% endif %}
+                                                {% for error in field.errors %}
+                                                <p style="color: red">{{ error }}</p>
+                                                {% endfor %}
+                                            </p>
+                                            {% endfor %}
+                                        </div>
+                                        <button class="btn btn-outline-" id="sigup-btn" type="submit">Sign up</button>
+                                    </form>
                                 </fieldset>
                                 <div class="form-group">
                                     <button class="btn btn-outline-" id="sigup-btn" type="submit">sign up</button>
                                 </div>
                             </form>
-                            <div class="text-center" style="padding-left: 3%; padding-right: 3%; color: rgb(158, 156, 156);">
-                                <span  style="font-size: 15.7px;">By signing up, you agree
-                                to our </span> <span style=" color: rgb(158, 156, 156);"> <b> Terms </b> , <b> Data </b> <b> Policy </b> and <b> Cookies Policy </b> .</span class="text-muted"> </div>
+                            <div class="text-center"
+                                style="padding-left: 3%; padding-right: 3%; color: rgb(158, 156, 156);">
+                                <span style="font-size: 15.7px;">By signing up, you agree
+                                    to our </span> <span style=" color: rgb(158, 156, 156);"> <b> Terms </b> , <b> Data
+                                    </b> <b> Policy </b> and <b> Cookies Policy </b> .</span class="text-muted"> </div>
 
                         </div>
                     </div>
