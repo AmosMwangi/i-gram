@@ -8,7 +8,7 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
+body{
     overflow-x: hidden !important;
 }
 
@@ -393,139 +393,24 @@ body {
 /*------------------------------------------------------------------------------- */
 
 
-@media screen and (min-width: 1496px) {
+@media screen and (min-width: 1200px) {
     #nav2 {
-        display: none;
+        display: none !important;
+    }
+    #post-card{
+        width: 600px;
+    }
+
+    #bb{
+        height: 20px !important;
+        width: 20px !important;
+    }
+    #right-pic{
+        position: relative;
+        float: right !important;
+        left: 200% !important;
     }
 }
-
-
-@media screen and (max-width: 1495px) {
-    #post-hub {
-        overflow-x: hidden;
-        width: 100%;
-    }
-
-    #post-card {
-        position: relative;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        left: 20%;
-    }
-
-    #right-pic {
-        display: none;
-    }
-
-    #thb {
-        display: none;
-    }
-
-    #search-form {
-        display: none;
-    }
-
-    #nav2 {
-        visibility: visible;
-        z-index: 999;
-        position: fixed !important;
-        bottom: 0;
-        border-top: 2px solid rgb(53, 51, 51);
-        width: 100% !important;
-        background-color: white;
-        padding: 5px;
-        
-    }
-
-    #aa,
-    #bb,
-    #cc {
-        position: relative;
-        width: 50px;
-        height: 40px;
-        margin-left: 150px;
-        left: 23%;
-        padding: 5px;
-    }
-}
-
-@media screen and (max-width: 1421px) {
-    #aa,
-    #bb,
-    #cc{
-        position: relative;
-        left: 20%;
-    }
-}
-
-
-@media screen and (max-width: 1199px) {
-    #aa,
-    #bb,
-    #cc{
-        position: relative;
-        left: 17%;
-    }
-}
-@media screen and (max-width: 1055px) {
-    #aa,
-    #bb,
-    #cc{
-        position: relative;
-        left: 14%;
-    }
-}
-
-@media screen and (max-width: 989px) {
-    #aa,
-    #bb,
-    #cc{
-        position: relative;
-        left: 15%;
-        padding: 2px;
-        margin-left: 100px;
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    #post-hub {
-        overflow-x: hidden;
-        width: 100%;
-    }
-
-    #post-card {
-        position: relative;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        left: 20%;
-    }
-
-    #right-pic {
-        display: none;
-    }
-
-    #thb {
-        display: none;
-    }
-
-    #search-form {
-        display: none;
-    }
-
-    #nav2 {
-        /* visibility: visible;
-        z-index: 999;
-        position: fixed !important;
-        bottom: 0;
-        border-top: 2px solid rgb(53, 51, 51);
-        width: 100% !important;
-        background-color: white; */
-    }
-}
-
-
 
 @media screen and (max-width: 1119px) {
     #thb {
@@ -544,44 +429,9 @@ body {
         bottom: 0;
 
     }
-}
-
-@media screen and (max-width: 767px) {
-    #aa,
-    #bb,
-    #cc{
-        position: relative;
-        left: 12%;
-    }
-
-    #post-card{
-        position: relative;
-        left: 0% !important;
-    }
-}
-
-@media screen and (max-width: 809px) {
-    #aa,
-    #bb,
-    #cc{
-        position: relative;
-        left: 14%;
-    }
 
 
 }
-/* 
-@media screen and (max-width: 700px) {
-    #aa,
-    #bb,
-    #cc{
-        position: relative;
-        left: 10%;
-    }
-
-
-} */
-
 
 
 @media screen and (max-width: 415px) {
@@ -646,7 +496,7 @@ body {
         font-size: 20px !important;
     }
 
-    #mock-name {
+    #mock-name{
         /* position: relative; */
         margin-left: 5%;
     }
