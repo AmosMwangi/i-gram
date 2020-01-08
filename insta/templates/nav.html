@@ -48,6 +48,35 @@
         }
 
     }
+
+
+    @media only screen and (min-width: 768px){
+        #aa {
+            position: relative;
+            width: 50px;
+            height: 40px;
+            margin: 30px;
+            left: 99px; 
+
+        }
+        #bb {
+            position: relative;
+            width: 50px;
+            height: 40px;
+            margin: 30px;
+            left: 99px; 
+
+        }
+        #cc {
+            position: relative;
+            width: 50px;
+            height: 40px;
+            margin: 30px;
+            left: 99px; 
+
+        }
+
+    }
 </style>
 
 <body>
@@ -88,12 +117,11 @@
     <!-- navbar for small screen -->
     <div>
         <nav id=nav2>
-            <a href="{% url 'create_post' %}"> <img src="{% static "imapp/pen.jpg" %}" id="aa"
-                    alt="My image"></a>
-                    <a href="{% url 'logout' %}"><img
-                        src="https://cdn.pixabay.com/photo/2017/01/02/21/42/power-off-1947949_960_720.png" id="bb"
-                        alt=""></a>
-            <a href="{% url 'profile' %}"> <img src="{% static "imapp/c.jpg" %}" id="cc" alt="My image">
+            <a href="{% url 'create_post' %}"> <img src="{% static "imapp/pen.jpg" %}" id="aa" alt="My image"></a>
+            <a href="{% url 'logout' %}"><img
+                    src="https://cdn.pixabay.com/photo/2017/01/02/21/42/power-off-1947949_960_720.png" id="bb" alt=" "
+                    ></a>
+            <a href="{% url 'profile' %}"> <img src="{% static "imapp/c.jpg" %}" id="cc" alt="My image" >
         </nav>
     </div>
 

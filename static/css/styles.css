@@ -395,30 +395,7 @@ body{
 
 @media screen and (min-width: 1200px) {
     #nav2 {
-        display: none !important;
-    }
-    #post-card{
-        width: 600px;
-    }
-
-    #logout{
-        position: relative;
-        top: 22% !important;
-        left: 10px;
-        height: 25px !important;
-        width: 25px !important;
-    }
-    #right-pic{
-        position: relative;
-        float: right !important;
-        left: 200% !important;
-    }
-
-    #search-form{
-        position: relative;
-        left: 40%;
-        top: 0;
-        margin-bottom: 10px;
+        display: none;
     }
 }
 
