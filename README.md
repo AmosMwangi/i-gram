@@ -1,5 +1,5 @@
 # [Insta Clone](https://github.com/AmosMwangi/i-gram.git)
-<img src="https://www.codester.com/static/uploads/items/4343/preview/003.jpg" width="200px" height="200px" alt="">
+
 
 This project was generated with [Python](https://www.python.org/) version 3.6.9 <br>
 
