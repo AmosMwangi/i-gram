@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-md-8">
             {% for post in posts %}
-            <div class="card">
+            <div class="card" id="post-card">
 
                 <div>
                     <!-- user who posted his/her profile pic and name will appear here -->
@@ -28,6 +28,7 @@
                         </div>
                     </a>
 
+                    <!-- three dots modal -->
 
                     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
                         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -59,25 +60,22 @@
 
 
                 <div id="link-icon">
-                    <form action="{%url 'like'%}" method="POST">
-                        {%csrf_token%}
-                        <button type="submit" name="post.id" value="{{post.id}}"><a href=""><img
-                                    src="{% static "imapp/1.jpg" %}" id="link" alt="image"></a></button>
-                    </form>
-                    {{post.liked.count}}
-
-                    <a href="{%url 'comment' post.id %}" class="btn" style="font-size: 15px">Write comment</a>
-                    <a href="{%url 'view' post.id%}" class="btn"><i style="font-size: 15px">view comments</i></a>
-
-
-
-
-
                     <a href=""><img src="{% static "imapp/2.jpg" %}" id="link" alt="image"></a>
                     <a href=""><img src="{% static "imapp/3.jpg" %}" id="link" alt="image"></a>
                     <a href=""><img src="{% static "imapp/4.jpg" %}" id="llink" alt="image"></a>
+                    <div id="st1">
+                        <form action="{%url 'like'%}" method="POST">
+                            {%csrf_token%}
+                            <button type="submit" name="post.id" value="{{post.id}}"><a href=""><img
+                                        src="{% static "imapp/1.jpg" %}" id="link" alt="image"></a></button>
+                        </form>
+                        {{post.liked.count}}
+
+                        <a href="{%url 'comment' post.id %}" id="btn-com" style="font-size: 15px">Write comment</a>
+                        <a href="{%url 'view' post.id%}" id="btn-com"><i style="font-size: 15px">view comments</i></a>
+                    </div>
                 </div>
-                <div id="maneno-card">
+                <div id="st1">
                     <h5 class="card-title">{{ post.title }}</h5>
                     <small class="card-text text-muted">
                         {{ post.date_posted|date:"F d, Y" }}</small>
@@ -89,7 +87,7 @@
             {% endfor %}
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4" id="right-pic">
             <!-- user credential -->
             <img src="{{ user.profile.image.url }}" id="user-img" alt="image">
             <div id="user">
@@ -110,7 +108,7 @@
 
 
 {% for post in posts %}
-<!-- Modal -->
+<!-- detail modal -->
 <div class="modal fade" id="extraModal{{post.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
