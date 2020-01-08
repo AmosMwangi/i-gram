@@ -401,14 +401,24 @@ body{
         width: 600px;
     }
 
-    #bb{
-        height: 20px !important;
-        width: 20px !important;
+    #logout{
+        position: relative;
+        top: 22% !important;
+        left: 10px;
+        height: 25px !important;
+        width: 25px !important;
     }
     #right-pic{
         position: relative;
         float: right !important;
         left: 200% !important;
+    }
+
+    #search-form{
+        position: relative;
+        left: 40%;
+        top: 0;
+        margin-bottom: 10px;
     }
 }
 
